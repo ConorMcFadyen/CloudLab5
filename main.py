@@ -24,12 +24,10 @@ def insert(cursor, name, email):
     try:
         cursor.execute(string)
         mysql.connection.commit()
-        print("YUPPPP")
-        return "<h1>Success adding user to database</h1>"
+        return "<h1>Added user to database</h1>"
     except Exception as e:
-        print("NOOOOO")
         print(e)
-        return "<h1>Failed to add user to database.</h1>"
+        return "<h1>Failed to add user</h1>"
 
 
 
@@ -46,13 +44,6 @@ def read(cursor):
         html = html + (f"<tr style='border: 1px solid blue'><th  style='border: 1px solid blue'>{Result['Name']}</th> <th style='border: 1px solid blue'>{Result['Email']}</th></tr> <br>")
 
     html = f"<table style='border: 1px solid blue'><tr style='border: 1px solid blue'><th  style='border: 1px solid blue'>Name</th><th style='border: 1px solid blue'>Email</th></tr>{html}</table>"
-    # response = {'Results': Results, 'count': len(Results)}
-    # ret = app.response_class(
-    #     response=json.dumps(response),
-    #     status=200,
-    #     mimetype='application/json'
-    # )
-    # return ret  # Return the data in a string format
     return html
 
 def update(cursor,id,email):
@@ -70,13 +61,10 @@ def delete(cursor,name):
         print(str)
         cursor.execute(str)
         mysql.connection.commit()
-        print("YUPPPP")
-        return "<h1>Success deleted user in database</h1>"
+        return "<h1>Deleted user sucessfully/h1>"
 
 
     except Exception as e:
-
-        print("NOOOOO")
 
         print(e)
 
@@ -92,17 +80,17 @@ def add():
 
 @app.route("/hello")  # Add Student
 def hello():
-    return '<h1>Hello and welcome to the website.</h1>'
+    return '<h1>This is the cloud lab!!!!!!!!!!!!!!!!</h1>'
 
 
-@app.route("/")  # Default - Show Data
-def read_users():  # Name of the method
-    cur = mysql.connection.cursor()  # create a connection to the SQL instance
+@app.route("/")  
+def read_users():  
+    cur = mysql.connection.cursor()  
     return read(cur)
 
-@app.route("/update")  # Default - Show Data
-def update_users():  # Name of the method
-    cur = mysql.connection.cursor()  # create a connection to the SQL instance
+@app.route("/update")  
+def update_users(): 
+    cur = mysql.connection.cursor()
 
     id = request.args.get('id')
     print(id)

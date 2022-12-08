@@ -1,14 +1,15 @@
 from flask import Flask
 from flask import request
 app = Flask(__name__)
+import pandas as pd # import package
+import numpy as np
+from pymongo import MongoClient
+import datetime
+import json
+
 
 @app.route("/")
 def hello():
-    import pandas as pd # import package
-    import numpy as np
-    from pymongo import MongoClient
-    import datetime
-    import json
 
     # Create a connection using MongoClient.
     cluster = MongoClient("mongodb+srv://Conor:Password123456789@cluster0.z7i6q3o.mongodb.net/?retryWrites=true&w=majority")

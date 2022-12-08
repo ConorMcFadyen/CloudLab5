@@ -4,17 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    import pandas as pd # import package
-    import numpy as np
-    from pymongo import MongoClient
-    import json
-    
-    # Create a connection using MongoClient.
-    cluster = MongoClient("mongodb+srv://Conor:Password123456789@cluster0.z7i6q3o.mongodb.net/?retryWrites=true&w=majority")
-
-    db = cluster["DatabaseAssignment2"]
-
-    collection = db["Characters"]
+    return "Welcome from the Cloud Lab 5"
 
 
     #print everything

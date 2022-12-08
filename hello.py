@@ -1,30 +1,18 @@
 from flask import Flask
 from flask import request
 app = Flask(__name__)
-import pandas as pd # import package
-import numpy as np
-from pymongo import MongoClient
-import datetime
-import json
+from PIL import Image
+import requests
+from io import BytesIO
+
 
 
 @app.route("/")
 def hello():
+    return "This is the cloud computing lab 5!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    
 
-    # Create a connection using MongoClient.
-    cluster = MongoClient("mongodb+srv://Conor:Password123456789@cluster0.z7i6q3o.mongodb.net/?retryWrites=true&w=majority")
 
-    db = cluster["DatabaseAssignment2"]
-
-    collection = db["Characters"]
-
-    list = []
-
-    #print everything
-    for j in collection.find():
-       list.append(j)
-
-    return "Trying to do database"
 
 
 

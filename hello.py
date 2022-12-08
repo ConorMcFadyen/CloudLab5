@@ -23,7 +23,7 @@ def hello():
     for j in collection.find():
        list.append(j)
 
-    return list
+    return "Trying to do database"
 
 
 

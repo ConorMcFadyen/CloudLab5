@@ -27,12 +27,6 @@ def hello():
 
 
 
-    #print everything
-    for j in collection.find():
-       print(j)
-
-
-
 @app.route("/route32a")
 def route32a():
     return "Hello from the 32A"

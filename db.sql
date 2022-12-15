@@ -1,7 +1,7 @@
 CREATE USER 'A'@'%' IDENTIFIED BY 'B';
 GRANT ALL PRIVILEGES ON *.* to 'A'@'%';
 
-CREATE DATABASE student; 
+CREATE DATABASE cloudlabsql; 
 USE student;
 CREATE TABLE students (studentName VARCHAR(255), email VARCHAR(255), studentID INT NOT NULL AUTO_INCREMENT,
 PRIMARY KEY(studentID));

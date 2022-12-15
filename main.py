@@ -11,7 +11,6 @@ CORS(app)
 # Change these details to match your instance configurations
 # Needs this to run
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'cloudlabsql'
 app.config['MYSQL_HOST'] = '35.195.191.88'
 mysql.init_app(app)

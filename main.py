@@ -40,9 +40,9 @@ def read(cursor):
         Result['Name'] = row[0].replace('\n', ' ')
         Result['Email'] = row[1]
         Result['ID'] = row[2]
-        html = html + (f"<tr style='border: 1px solid blue'><th  style='border: 1px solid blue'>{Result['Name']}</th> <th style='border: 1px solid blue'>{Result['Email']}</th></tr> <br>")
+        html = html + (f"<tr style='border: 1px solid red'><th  style='border: 2px solid red'>{Result['Name']}</th> <th style='border: 1px solid red'>{Result['Email']}</th></tr> <br>")
 
-    html = f"<table style='border: 1px solid blue'><tr style='border: 1px solid blue'><th  style='border: 1px solid blue'>Name</th><th style='border: 1px solid blue'>Email</th></tr>{html}</table>"
+    html = f"<table style='border: 1px solid red'><tr style='border: 2px solid red'><th  style='border: 1px solid red'>Name</th><th style='border: 1px solid red'>Email</th></tr>{html}</table>"
     return html
 
 def update(cursor,id,email):
